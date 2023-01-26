@@ -15,6 +15,7 @@
 		6165076429832A2B0014D46D /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165076329832A2B0014D46D /* ApexPredator.swift */; };
 		6165076629832AC70014D46D /* PredatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165076529832AC70014D46D /* PredatorController.swift */; };
 		61650768298331200014D46D /* PredatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61650767298331200014D46D /* PredatorRow.swift */; };
+		6165076A298334CB0014D46D /* PredatorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61650769298334CB0014D46D /* PredatorDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		6165076329832A2B0014D46D /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
 		6165076529832AC70014D46D /* PredatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorController.swift; sourceTree = "<group>"; };
 		61650767298331200014D46D /* PredatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorRow.swift; sourceTree = "<group>"; };
+		61650769298334CB0014D46D /* PredatorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				6165076529832AC70014D46D /* PredatorController.swift */,
 				610A601A2983262B004A16A8 /* ContentView.swift */,
 				61650767298331200014D46D /* PredatorRow.swift */,
+				61650769298334CB0014D46D /* PredatorDetail.swift */,
 				616507612983297B0014D46D /* jpapexpredators.json */,
 				610A601C2983262B004A16A8 /* Assets.xcassets */,
 				610A601E2983262B004A16A8 /* Preview Content */,
@@ -153,6 +156,7 @@
 				6165076629832AC70014D46D /* PredatorController.swift in Sources */,
 				6165076429832A2B0014D46D /* ApexPredator.swift in Sources */,
 				610A601B2983262B004A16A8 /* ContentView.swift in Sources */,
+				6165076A298334CB0014D46D /* PredatorDetail.swift in Sources */,
 				610A60192983262B004A16A8 /* JPApexPredatorsApp.swift in Sources */,
 				61650768298331200014D46D /* PredatorRow.swift in Sources */,
 			);
