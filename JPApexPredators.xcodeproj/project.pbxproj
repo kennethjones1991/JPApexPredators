@@ -11,6 +11,7 @@
 		610A601B2983262B004A16A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610A601A2983262B004A16A8 /* ContentView.swift */; };
 		610A601D2983262B004A16A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 610A601C2983262B004A16A8 /* Assets.xcassets */; };
 		610A60202983262B004A16A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 610A601F2983262B004A16A8 /* Preview Assets.xcassets */; };
+		616507622983297B0014D46D /* jpapexpredators.json in Resources */ = {isa = PBXBuildFile; fileRef = 616507612983297B0014D46D /* jpapexpredators.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		610A601A2983262B004A16A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		610A601C2983262B004A16A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		610A601F2983262B004A16A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		616507612983297B0014D46D /* jpapexpredators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jpapexpredators.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				610A60182983262B004A16A8 /* JPApexPredatorsApp.swift */,
 				610A601A2983262B004A16A8 /* ContentView.swift */,
+				616507612983297B0014D46D /* jpapexpredators.json */,
 				610A601C2983262B004A16A8 /* Assets.xcassets */,
 				610A601E2983262B004A16A8 /* Preview Content */,
 			);
@@ -127,6 +130,7 @@
 			files = (
 				610A60202983262B004A16A8 /* Preview Assets.xcassets in Resources */,
 				610A601D2983262B004A16A8 /* Assets.xcassets in Resources */,
+				616507622983297B0014D46D /* jpapexpredators.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
