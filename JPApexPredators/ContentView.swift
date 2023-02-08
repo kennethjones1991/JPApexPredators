@@ -19,9 +19,11 @@ struct ContentView: View {
             apController.sortByAlphabetical()
         } else {
             apController.sortByMovieAppearance()
-        }
+        } // TODO: consider using a ternary operator
+        // TODO: also consider just using a function that I run with onAppear (will need to test and see if it works with sorting and filtering)
         
-        return NavigationView {
+        return NavigationView { // TODO: consider adding a Task under this NavigationView that does the filtering and sorting from above. Or just leave it as is so we have a reason to explain the return keyword.
+            // TODO: also change this NavigationView to NavigationStack.
             List {
                 ForEach(apController.apexPredators) { predator in
                     NavigationLink(destination: PredatorDetail(predator: predator)) {
@@ -41,7 +43,7 @@ struct ContentView: View {
                             Image(systemName: "film")
                         } else {
                             Image(systemName: "textformat")
-                        }
+                        } // TODO: consider adding our ternary operator here instead of this long if else statement
                     }
                 }
                 
@@ -63,7 +65,7 @@ struct ContentView: View {
                     }
                 }
             }
-        }
+        } // TODO: Add a .preferredColorScheme(.dark) modifier so it shows up in dark mode on the simulator too
     }
 }
 

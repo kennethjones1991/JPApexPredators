@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ApexPredator: Codable, Identifiable {
+struct ApexPredator: Codable, Identifiable { // TODO: change Codable to Decodable
     let id: Int
     let name: String
     let type: String
@@ -26,7 +26,7 @@ struct ApexPredator: Codable, Identifiable {
     }
 }
 
-struct MovieScene: Codable, Identifiable {
+struct MovieScene: Codable, Identifiable { // TODO: change Codable to Decodable
     let id: Int
     let movie: String
     let sceneDescription: String

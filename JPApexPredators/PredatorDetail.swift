@@ -24,6 +24,7 @@ struct PredatorDetail: View {
                     .shadow(color: .black, radius: 6, x: 0, y: 0)
                     .offset(y: -210)
                     .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                
                 VStack(alignment: .leading) {
                     Text(predator.name)
                         .font(.largeTitle)
@@ -52,6 +53,7 @@ struct PredatorDetail: View {
                     
                     Text("Read More:")
                         .font(.caption)
+                    
                     Link(predator.link, destination: URL(string: predator.link)!)
                         .font(.caption)
                         .foregroundColor(.blue)
@@ -60,7 +62,7 @@ struct PredatorDetail: View {
                 .padding()
             }
         }
-        .edgesIgnoringSafeArea(.top)
+        .edgesIgnoringSafeArea(.top) // TODO: change to ignoreSafeArea
     }
 }
 
@@ -72,6 +74,6 @@ struct PredatorDetail_Previews: PreviewProvider {
         let predator = ApexPredator(id: 3, name: "Tyrannosaurus Rex", type: "land", movies: ["Jurassic Park", "The Lost World: Jurassic Park", "Jurassic Park III", "Jurassic World", "Jurassic World: Fallen Kingdom"], movieScenes: [movieScene, movieScene2], link: "https://jurassicpark.fandom.com/wiki/Tyrannosaurus_rex")
         
         PredatorDetail(predator: predator)
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark) // TODO: add this to the actual screen above IF adding it to the main screen isn't good enough to include both
     }
 }
