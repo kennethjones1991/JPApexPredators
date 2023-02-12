@@ -62,7 +62,7 @@ struct PredatorDetail: View {
                 .padding()
             }
         }
-        .ignoresSafeArea() // Change
+        .ignoresSafeArea()
     }
 }
 
@@ -74,6 +74,6 @@ struct PredatorDetail_Previews: PreviewProvider {
         let predator = ApexPredator(id: 3, name: "Tyrannosaurus Rex", type: "land", movies: ["Jurassic Park", "The Lost World: Jurassic Park", "Jurassic Park III", "Jurassic World", "Jurassic World: Fallen Kingdom"], movieScenes: [movieScene, movieScene2], link: "https://jurassicpark.fandom.com/wiki/Tyrannosaurus_rex")
         
         PredatorDetail(predator: predator)
-            .preferredColorScheme(.dark) // Keep; no need to add it to the view above
+            .preferredColorScheme(.dark)
     }
 }

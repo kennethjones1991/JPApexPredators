@@ -46,6 +46,5 @@ struct PredatorRow_Previews: PreviewProvider {
         
         PredatorRow(predator: predator)
             .preferredColorScheme(.dark)
-//            .previewLayout(.sizeThatFits) // Remove
     }
 }

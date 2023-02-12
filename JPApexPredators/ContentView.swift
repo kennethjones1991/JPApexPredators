@@ -21,7 +21,7 @@ struct ContentView: View {
             apController.sortByMovieAppearance()
         }
         
-        return NavigationStack { // Change; to NavigationStack
+        return NavigationStack {
             List {
                 ForEach(apController.apexPredators) { predator in
                     NavigationLink(destination: PredatorDetail(predator: predator)) {
@@ -65,13 +65,12 @@ struct ContentView: View {
                 }
             }
         }
-        .preferredColorScheme(.dark) // New
+        .preferredColorScheme(.dark)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//            .preferredColorScheme(.dark) // Remove; put on actual view instead
     }
 }
