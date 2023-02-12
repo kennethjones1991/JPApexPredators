@@ -19,11 +19,9 @@ struct ContentView: View {
             apController.sortByAlphabetical()
         } else {
             apController.sortByMovieAppearance()
-        } // TODO: consider using a ternary operator
-        // TODO: also consider just using a function that I run with onAppear (will need to test and see if it works with sorting and filtering)
+        }
         
-        return NavigationView { // TODO: consider adding a Task under this NavigationView that does the filtering and sorting from above. Or just leave it as is so we have a reason to explain the return keyword.
-            // TODO: also change this NavigationView to NavigationStack.
+        return NavigationStack { // Change; to NavigationStack
             List {
                 ForEach(apController.apexPredators) { predator in
                     NavigationLink(destination: PredatorDetail(predator: predator)) {
@@ -39,11 +37,12 @@ struct ContentView: View {
                             sortAlphabetical.toggle()
                         }
                     } label: {
-                        if sortAlphabetical {
-                            Image(systemName: "film")
-                        } else {
-                            Image(systemName: "textformat")
-                        } // TODO: consider adding our ternary operator here instead of this long if else statement
+//                        if sortAlphabetical {
+//                            Image(systemName: "film")
+//                        } else {
+//                            Image(systemName: "textformat")
+//                        } // Keep for example, then use ternary to show shorter version
+                        Image(systemName: sortAlphabetical ? "film" : "textformat")
                     }
                 }
                 
@@ -65,13 +64,14 @@ struct ContentView: View {
                     }
                 }
             }
-        } // TODO: Add a .preferredColorScheme(.dark) modifier so it shows up in dark mode on the simulator too
+        }
+        .preferredColorScheme(.dark) // New
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark) // Remove; put on actual view instead
     }
 }
