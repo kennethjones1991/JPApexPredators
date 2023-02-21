@@ -20,6 +20,7 @@ struct ContentView: View {
         } else {
             apController.sortByMovieAppearance()
         }
+        // Show the ternary operator here, and then talk about why we don't always use it since it just takes way too long to figure out what's happening. With the if else, we can easily see what's going on.
         
         return NavigationStack {
             List {

@@ -16,6 +16,10 @@ struct ApexPredator: Decodable, Identifiable {
     let movieScenes: [MovieScene]
     let link: String
     
+    var image: String {
+        name.lowercased().filter { $0 != " " }
+    }
+    
     func typeOverlay() -> Color {
         switch type {
         case "land": return .brown

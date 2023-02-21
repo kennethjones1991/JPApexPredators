@@ -8,6 +8,8 @@
 import Foundation
 
 class PredatorController {
+    static let previewController = PredatorController()
+    
     private var allApexPredators: [ApexPredator] = []
     var apexPredators: [ApexPredator] = []
     let typeFilters = ["All", "Land", "Air", "Sea"]
