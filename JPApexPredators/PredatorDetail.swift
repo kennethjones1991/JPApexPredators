@@ -14,7 +14,7 @@ struct PredatorDetail: View {
         ScrollView {
             VStack(alignment: .trailing) {
                 ZStack(alignment: .bottomTrailing) {
-                    Image(predator.type)
+                    Image(predator.type.rawValue.lowercased())
                         .resizable()
                         .scaledToFit()
                     

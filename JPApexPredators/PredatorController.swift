@@ -31,7 +31,7 @@ class PredatorController {
         }
     }
     
-    func typeIcon(for type: TypeFilter) -> String {
+    func typeIcon(for type: PredatorType) -> String {
         switch type {
         case .all: return "square.stack.3d.up.fill"
         case .land: return "leaf.fill"
@@ -40,11 +40,11 @@ class PredatorController {
         }
     }
     
-    func filterBy(type: TypeFilter) {
+    func filterBy(type: PredatorType) {
         switch type {
         case .land, .air, .sea:
             apexPredators = allApexPredators.filter {
-                $0.type == type.rawValue.lowercased()
+                $0.type == type
             }
         default: apexPredators = allApexPredators
         }
@@ -57,11 +57,4 @@ class PredatorController {
     func sortByMovieAppearance() {
         apexPredators.sort(by: { $0.id < $1.id })
     }
-}
-
-enum TypeFilter: String, CaseIterable {
-    case all = "All"
-    case land = "Land"
-    case air = "Air"
-    case sea = "Sea"
 }

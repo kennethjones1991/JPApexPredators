@@ -25,7 +25,7 @@ struct PredatorRow: View {
                     .fontWeight(.bold)
                 
                 // Type
-                Text(predator.type.capitalized)
+                Text(predator.type.rawValue.capitalized)
                     .font(.subheadline)
                     .fontWeight(.bold)
                     .padding(.horizontal, 13)

@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     let apController = PredatorController()
     @State var sortAlphabetical = false
-    @State var currentFilter = TypeFilter.all
+    @State var currentFilter = PredatorType.all
     
     var body: some View {
         apController.filterBy(type: currentFilter)
@@ -50,9 +50,9 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu {
                         Picker("Filter", selection: $currentFilter.animation()) {
-                            ForEach(TypeFilter.allCases, id: \.self) { type in
+                            ForEach(PredatorType.allCases, id: \.self) { type in
                                 HStack {
-                                    Text(type.rawValue)
+                                    Text(type.rawValue.capitalized)
                                     
                                     Spacer()
                                     
