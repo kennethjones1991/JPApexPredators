@@ -12,7 +12,6 @@ class PredatorController {
     
     private var allApexPredators: [ApexPredator] = []
     var apexPredators: [ApexPredator] = []
-    let typeFilters = ["All", "Land", "Air", "Sea"]
     
     init() {
         decodeApexPredatorData()
@@ -32,21 +31,20 @@ class PredatorController {
         }
     }
     
-    func typeIcon(for type: String) -> String {
+    func typeIcon(for type: TypeFilter) -> String {
         switch type {
-        case "All": return "square.stack.3d.up.fill"
-        case "Land": return "leaf.fill"
-        case "Air": return "wind"
-        case "Sea": return "drop.fill"
-        default: return "questionmark"
+        case .all: return "square.stack.3d.up.fill"
+        case .land: return "leaf.fill"
+        case .air: return "wind"
+        case .sea: return "drop.fill"
         }
     }
     
-    func filterBy(type: String) {
+    func filterBy(type: TypeFilter) {
         switch type {
-        case "Land", "Air", "Sea":
+        case .land, .air, .sea:
             apexPredators = allApexPredators.filter {
-                $0.type == type.lowercased()
+                $0.type == type.rawValue.lowercased()
             }
         default: apexPredators = allApexPredators
         }
@@ -59,4 +57,11 @@ class PredatorController {
     func sortByMovieAppearance() {
         apexPredators.sort(by: { $0.id < $1.id })
     }
+}
+
+enum TypeFilter: String, CaseIterable {
+    case all = "All"
+    case land = "Land"
+    case air = "Air"
+    case sea = "Sea"
 }
