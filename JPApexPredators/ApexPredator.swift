@@ -42,6 +42,15 @@ enum PredatorType: String, Codable, CaseIterable {
     case air = "air"
     case sea = "sea"
     
+    var icon: String {
+        switch self {
+        case .all: return "square.stack.3d.up.fill"
+        case .land: return "leaf.fill"
+        case .air: return "wind"
+        case .sea: return "drop.fill"
+        }
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let typeString = try container.decode(String.self)

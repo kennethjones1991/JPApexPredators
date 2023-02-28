@@ -56,7 +56,7 @@ struct ContentView: View {
                                     
                                     Spacer()
                                     
-                                    Image(systemName: apController.typeIcon(for: type))
+                                    Image(systemName: type.icon)
                                 }
                             }
                         }

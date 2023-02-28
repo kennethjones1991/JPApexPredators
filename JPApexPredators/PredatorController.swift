@@ -31,15 +31,6 @@ class PredatorController {
         }
     }
     
-    func typeIcon(for type: PredatorType) -> String {
-        switch type {
-        case .all: return "square.stack.3d.up.fill"
-        case .land: return "leaf.fill"
-        case .air: return "wind"
-        case .sea: return "drop.fill"
-        }
-    }
-    
     func filterBy(type: PredatorType) {
         switch type {
         case .land, .air, .sea:
