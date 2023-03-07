@@ -32,7 +32,7 @@ struct PredatorRow: View {
                     .padding(.vertical, 5)
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(predator.typeOverlay().opacity(0.33))
+                            .fill(predator.type.overlay.opacity(0.33))
                     )
             }
         }
@@ -41,7 +41,7 @@ struct PredatorRow: View {
 
 struct PredatorRow_Previews: PreviewProvider {
     static var previews: some View {
-        PredatorRow(predator: PredatorController.previewController.apexPredators[2])
+        PredatorRow(predator: PredatorController.preview.apexPredators[2])
             .preferredColorScheme(.dark)
     }
 }

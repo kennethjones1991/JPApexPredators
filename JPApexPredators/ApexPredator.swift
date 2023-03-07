@@ -19,15 +19,6 @@ struct ApexPredator: Decodable, Identifiable {
     var image: String {
         name.lowercased().filter { $0 != " " }
     }
-    
-    func typeOverlay() -> Color {
-        switch type {
-        case .land: return .brown
-        case .air: return .teal
-        case .sea: return .blue
-        default: return .brown
-        }
-    }
 }
 
 struct MovieScene: Decodable, Identifiable {
@@ -37,10 +28,10 @@ struct MovieScene: Decodable, Identifiable {
 }
 
 enum PredatorType: String, Codable, CaseIterable {
-    case all = "all"
-    case land = "land"
-    case air = "air"
-    case sea = "sea"
+    case all
+    case land
+    case air
+    case sea
     
     var icon: String {
         switch self {
@@ -51,14 +42,12 @@ enum PredatorType: String, Codable, CaseIterable {
         }
     }
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        let typeString = try container.decode(String.self)
-        
-        if let type = PredatorType(rawValue: typeString) {
-            self = type
-        } else {
-            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Failed to initialize AllType from string type: \(typeString)")
+    var overlay: Color {
+        switch self {
+        case .land: return .brown
+        case .air: return .teal
+        case .sea: return .blue
+        default: return .brown
         }
     }
 }

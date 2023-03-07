@@ -14,9 +14,15 @@ struct PredatorDetail: View {
         ScrollView {
             VStack(alignment: .trailing) {
                 ZStack(alignment: .bottomTrailing) {
-                    Image(predator.type.rawValue.lowercased())
+                    Image(predator.type.rawValue)
                         .resizable()
                         .scaledToFit()
+                        .overlay(
+                            LinearGradient(gradient: Gradient(stops: [
+                                .init(color: .clear, location: 0.8),
+                                .init(color: .black, location: 1)
+                            ]), startPoint: .top, endPoint: .bottom)
+                        )
                     
                     Image(predator.image)
                         .resizable()
@@ -69,7 +75,7 @@ struct PredatorDetail: View {
 
 struct PredatorDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PredatorDetail(predator: PredatorController.previewController.apexPredators[2])
+        PredatorDetail(predator: PredatorController.preview.apexPredators[2])
             .preferredColorScheme(.dark)
     }
 }

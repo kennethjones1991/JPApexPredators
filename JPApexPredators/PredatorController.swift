@@ -8,7 +8,7 @@
 import Foundation
 
 class PredatorController {
-    static let previewController = PredatorController()
+    static let preview = PredatorController()
     
     private var allApexPredators: [ApexPredator] = []
     var apexPredators: [ApexPredator] = []
@@ -42,10 +42,10 @@ class PredatorController {
     }
     
     func sortByAlphabetical() {
-        apexPredators.sort(by: { $0.name < $1.name })
+        apexPredators.sort { $0.name < $1.name }
     }
     
     func sortByMovieAppearance() {
-        apexPredators.sort(by: { $0.id < $1.id })
+        apexPredators.sort { $0.id < $1.id }
     }
 }
