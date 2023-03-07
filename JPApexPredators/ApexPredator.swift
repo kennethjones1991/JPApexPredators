@@ -27,7 +27,7 @@ struct MovieScene: Decodable, Identifiable {
     let sceneDescription: String
 }
 
-enum PredatorType: String, Codable, CaseIterable {
+enum PredatorType: String, Decodable, CaseIterable {
     case all
     case land
     case air
