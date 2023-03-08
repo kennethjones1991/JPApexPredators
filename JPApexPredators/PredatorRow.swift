@@ -30,10 +30,8 @@ struct PredatorRow: View {
                     .fontWeight(.bold)
                     .padding(.horizontal, 13)
                     .padding(.vertical, 5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(predator.type.overlay.opacity(0.33))
-                    )
+                    .background(predator.type.overlay.opacity(0.33))
+                    .clipShape(Capsule())
             }
         }
     }
